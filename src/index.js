@@ -18,6 +18,7 @@ const swiper = new Swiper('.swiper', {
 	}
 });
 
+
 function elementHideShow(elem) {
 	const list = document.querySelector(`.${elem}__list`);
 	const buttonShowHidden = document.querySelector(`.${elem}__btn`);
@@ -26,14 +27,14 @@ function elementHideShow(elem) {
 		buttonShowHidden.classList.toggle('button-show-hide--active');
 		list.classList.toggle(`${elem}__list--show`);
 		if (changeWordsButton) {
-			buttonShowHidden.textContent = "Скрыть";
+			buttonShowHidden.textContent = 'Скрыть';
 			changeWordsButton = false;
 		} else {
-			buttonShowHidden.textContent = "Показать все";
+			buttonShowHidden.textContent = 'Показать все';
 			changeWordsButton = true;
 		}
 	});
-};
+}
 
 function textHideShow() {
 	const buttonHideShow = document.querySelector('.info__button');
@@ -44,15 +45,15 @@ function textHideShow() {
 		infoText.forEach(function (elem, index) {
 			if (index !== 0) {
 				elem.classList.toggle('info__text--hide');
-				elem.style.cssText = `max-height: 200px`;
-				if (elem.classList.contains('info__text--hide')) elem.style.cssText = `max-height: 0`;
+				elem.style.cssText = 'max-height: 200px';
+				if (elem.classList.contains('info__text--hide')) elem.style.cssText = 'max-height: 0';
 			}
 		});
 		if (checkButton) {
-			buttonHideShow.textContent = "Скрыть";
+			buttonHideShow.textContent = 'Скрыть';
 			checkButton = false;
 		} else {
-			buttonHideShow.textContent = "Читать далее";
+			buttonHideShow.textContent = 'Читать далее';
 			checkButton = true;
 		}
 		buttonHideShow.classList.toggle('info__button--active');
@@ -69,7 +70,7 @@ function clickMenu(list, button) {
 			event.target.classList.add(`${button}--checked`);
 		}
 	});
-};
+}
 
 
 function menuOpen() {
@@ -106,8 +107,8 @@ function modal() {
 	const modalFeedback = document.querySelector('.modal-feedback');
 	const overlay = document.querySelector('.overlay');
 	const body = document.querySelector('body');
-	const modalCallClose = document.querySelector('.modal-call__close')
-	const modalFeedbackClose = document.querySelector('.modal-feedback__close')
+	const modalCallClose = document.querySelector('.modal-call__close');
+	const modalFeedbackClose = document.querySelector('.modal-feedback__close');
 	const sidebar = document.querySelector('.sidebar');
 
 	function toggleClassCall() {
@@ -123,7 +124,7 @@ function modal() {
 	}
 
 	function removeClass() {
-		const burgerMenu = document.querySelector('.burger-menu')
+		const burgerMenu = document.querySelector('.burger-menu');
 		modalCall.classList.remove('modal-call--active');
 		modalFeedback.classList.remove('modal-feedback--active');
 		overlay.classList.remove('overlay--active');
@@ -185,3 +186,5 @@ clickMenu('menu__list', 'menu__link');
 clickMenu('page-menu__list', 'page-menu__button');
 menuOpen();
 modal();
+
+// swiper();
