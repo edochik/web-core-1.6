@@ -1,0 +1,86 @@
+.sidebar {
+	position: absolute;
+	z-index: 9;
+	width: 320px;
+	padding: 16px 16px 32px;
+	box-shadow: unset;
+	font-size: 16px;
+	top: -84px;
+	left: -16px;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	height: 100vh;
+	transition: transform 0.4s ease-in-out;
+	transform: translateX(-100%);
+	&--active {
+		box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2);
+		transform: translateX(0);
+	}
+	& > &__header {
+		margin-bottom: 23px;
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		column-gap: 16px;
+		& > .logo {
+			margin-left: 56px;
+		}
+		& > .search {
+			margin-left: auto;
+		}
+	}
+	& > .menu {
+		margin-bottom: 32px;
+	}
+	&__footer {
+		margin-top: auto;
+		display: flex;
+		flex-direction: column;
+		& > .contacts {
+			display: flex;
+			column-gap: 16px;
+			margin-bottom: 10px;
+		}
+		& > .mail {
+			margin-bottom: 12px;
+		}
+		& > .phone {
+			margin-bottom: 8px;
+		}
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.sidebar {
+		left: -24px;
+		padding: 16px 24px 32px;
+		transform: translateX(-160%);
+		&--active {
+			transform: translateX(0);
+		}
+	}
+}
+@media (min-width: $desktop-width) {
+	.sidebar {
+		height: 106%;
+		padding-top: 30px;
+		width: 320px;
+		box-shadow: unset;
+		left: -46px;
+		top: 0;
+		transform: translateX(-306px);
+		&__header {
+			& > .logo {
+				margin-left: 0;
+			}
+		}
+		& > .menu {
+			margin-bottom: 240px;
+		}
+		&__footer {
+			margin-top: 0;
+		}
+	}
+}

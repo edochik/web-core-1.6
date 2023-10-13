@@ -1,0 +1,28 @@
+.title {
+	margin: 0;
+	font-size: 28px;
+	font-weight: 700;
+	letter-spacing: -0.6px;
+	&--decor {
+		position: relative;
+		&::after {
+			@include decor-text;
+		}
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.title {
+		&--decor::after {
+			left: -24px;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.title {
+		&--decor::after {
+			left: -32px;
+		}
+	}
+}

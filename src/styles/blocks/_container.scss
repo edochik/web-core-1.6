@@ -1,0 +1,35 @@
+.container {
+	overflow-x: hidden;
+	position: relative;
+	padding: 0 16px;
+	margin: 0 auto;
+	background-color: #f8f8f8;
+	& > .header {
+		padding-left: 16px;
+		padding-right: 16px;
+		margin-left: -16px;
+		margin-right: -16px;
+		background-color: #fff;
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.container {
+		padding: 0 24px;
+		max-width: 1105px;
+		& > .header {
+			padding-left: 24px;
+			padding-right: 24px;
+			margin-left: -24px;
+			margin-right: -24px;
+			background-color: #fff;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.container {
+		max-width: 1425px;
+		padding: 0 24px;
+	}
+}

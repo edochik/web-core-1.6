@@ -1,0 +1,26 @@
+@media (min-width: $tablet-width) {
+	.button-show-hide {
+		position: relative;
+		display: block;
+		padding-left: 32px;
+		font-weight: 500;
+		letter-spacing: -0.2px;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		&::before {
+			position: absolute;
+			content: '';
+			background: url('../../img/icon-expand.svg') no-repeat center;
+			width: 24px;
+			height: 24px;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+		&.button-show-hide--active::before {
+			transform: rotate(180deg);
+			top: 0;
+		}
+	}
+}

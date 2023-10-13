@@ -1,0 +1,36 @@
+.contacts {
+	display: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	&__item {
+		position: relative;
+		&:active {
+			top: 1px;
+		}
+	}
+	&__link {
+		text-decoration: none;
+		color: inherit;
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.contacts {
+		position: relative;
+		display: flex;
+	align-items: center;
+		column-gap: 16px;
+		&--decor-right::after {
+			position: absolute;
+			content: '';
+			width: 2px;
+			height: 32px;
+			top: 50%;
+			right: -22px;
+			border-radius: 1px;
+			background: #eaeaea;
+			transform: translateY(-50%);
+		}
+	}
+}

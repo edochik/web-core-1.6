@@ -1,0 +1,112 @@
+.brands {
+	position: relative;
+	padding: 12px 0;
+	&-swiper {
+		margin-top: 16px;
+	}
+	&__list {
+		list-style: none;
+		margin: 0;
+	}
+	&__item {
+		display: inline-block;
+		width: 238px;
+		height: 70px;
+		border: 1px solid #eaeaea;
+		border-radius: 6px;
+		background-color: #fff;
+	}
+	&__link {
+		position: relative;
+		height: 100%;
+		padding-left: 16px;
+		display: flex;
+		align-items: center;
+		&::after {
+			position: absolute;
+			content: '';
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='1' y='1' width='38' height='38' rx='19' stroke='%23FF3E79' stroke-width='2'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z' fill='%23FF3E79'/%3e%3c/svg%3e ");
+			width: 40px;
+			height: 40px;
+			top: 50%;
+			right: 16px;
+			transform: translateY(-50%);
+		}
+	}
+	&__btn {
+		display: none;
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		width: 24px;
+		height: 81px;
+		right: -16px;
+		bottom: 38px;
+		z-index: 2;
+		background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0) 100%);
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.brands {
+		padding: 16px 0;
+		&::after {
+			display: none;
+		}
+		&-swiper {
+			margin: 24px 0;
+		}
+		&__item {
+			width: 222px;
+		}
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 16px 24px;
+			height: 160px;
+			transition: height 0.3s ease-in-out;
+			&--show {
+				height: 336px;
+			}
+		}
+		&__btn {
+			&::after {
+				@include linear-text(75%, 30px);
+			}
+			&:hover::after {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media (min-width: 1014px) {
+	.brands {
+		&__list--show {
+			height: 248px;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.brands {
+		padding: 25px 0;
+		&__list {
+			column-gap: 32px;
+			justify-content: center;
+		}
+		&__item {
+			width: 238px;
+		}
+	}
+}
+
+@media (min-width: $desktop-big-desktop) {
+	.brands {
+		&__list {
+			justify-content: flex-start;
+		}
+	}
+}

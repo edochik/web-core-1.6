@@ -1,0 +1,45 @@
+.menu {
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		row-gap: 32px;
+	}
+	&__link {
+		position: relative;
+		color: inherit;
+		text-decoration: none;
+		letter-spacing: -0.2px;
+		font-weight: 500;
+		&--checked {
+			position: relative;
+			color: #7e7e82;
+			&:before {
+				@include decor-text;
+			}
+		}
+		&:after {
+			@include linear-text(100%, 0px);
+		}
+		&:hover:after {
+			opacity: 1;
+		}
+		&:active {
+			top: 1px;
+		}
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.menu {
+		&__link {
+			&--checked {
+				&:before {
+					left: -24px;
+				}
+			}
+		}
+	}
+}

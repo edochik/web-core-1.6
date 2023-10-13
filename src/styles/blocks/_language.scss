@@ -1,0 +1,26 @@
+.language {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	column-gap: 7px;
+	&__item {
+		transition:
+			background-color 0.3s ease-in,
+			color 0.3s ease-in;
+		border-radius: 5px;
+		&:hover {
+			background-color: rgba(126, 126, 130, 0.5);
+			color: #fff;
+		}
+	}
+	&__link {
+		text-decoration: none;
+		color: inherit;
+		font-weight: 500;
+		letter-spacing: -0.2px;
+		&--checked {
+			color: #7e7e82;
+		}
+	}
+}

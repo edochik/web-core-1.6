@@ -1,0 +1,16 @@
+.main {
+	position: relative;
+}
+
+@media (min-width: $desktop-width) {
+	.main {
+		max-width: 973px;
+		margin-left: auto;
+	}
+}
+
+@media (min-width: $desktop-big-desktop) {
+	.main {
+		max-width: 1057px;
+	}
+}

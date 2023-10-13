@@ -1,0 +1,110 @@
+.devices {
+	position: relative;
+	padding: 12px 0;
+	&-swiper {
+		margin-top: 16px;
+	}
+	&__list {
+		margin: 0 0 0 0;
+		list-style: none;
+	}
+	&__item {
+		height: 160px;
+		width: 238px;
+		border-radius: 6px;
+		border: 1px solid #eaeaea;
+		background: #fff;
+	}
+	&__link {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		color: inherit;
+		&::after {
+			position: absolute;
+			content: '';
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='1' y='1' width='38' height='38' rx='19' stroke='%23FF3E79' stroke-width='2'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z' fill='%23FF3E79'/%3e%3c/svg%3e ");
+			height: 40px;
+			width: 40px;
+			right: 16px;
+			bottom: 16px;
+		}
+	}
+	&__text {
+		padding: 16px 0 0 16px;
+		margin: 0;
+		font-weight: 500;
+		letter-spacing: -0.2px;
+	}
+	&__btn {
+		display: none;
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		width: 24px;
+		height: 168px;
+		right: -16px;
+		bottom: 38px;
+		z-index: 2;
+		background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0) 100%);
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.devices {
+		padding: 16px 0;
+		&-swiper {
+			margin: 24px 0;
+		}
+		&__list {
+			display: grid;
+			grid-template-columns: repeat(3, 222px);
+			justify-content: space-evenly;
+			gap: 24px;
+			height: 164px;
+			transition: height 0.3s ease-in-out;
+		}
+		&__item {
+			width: 222px;
+		}
+		&__link {
+		}
+		&__text {
+		}
+		&__list--show {
+			height: 350px;
+		}
+		&__btn {
+			&::after {
+				@include linear-text(75%, 30px);
+			}
+			&:hover::after {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.devices {
+		padding: 25px 0;
+		&__item {
+			width: 238px;
+		}
+		&__link {
+		}
+		&__text {
+		}
+	}
+}
+
+@media (min-width: $desktop-big-desktop) {
+	.devices {
+		&__list {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}

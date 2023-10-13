@@ -1,0 +1,28 @@
+.swiper {
+	margin: 0 -16px 0 0;
+	&-wrapper {
+		padding: 0 0 30px 0;
+	}
+	& > &-pagination {
+		bottom: -5px;
+	}
+	&-pagination {
+		&-bullet {
+			width: 12px;
+			height: 12px;
+			background-color: #979797;
+			&-active {
+				background-color: #b5b6bc;
+			}
+		}
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.swiper {
+		margin: 0;
+		&-wrapper {
+			padding: 0;
+		}
+	}
+}

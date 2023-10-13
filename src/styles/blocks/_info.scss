@@ -1,0 +1,103 @@
+.info {
+	&__column {
+		margin-bottom: 16px;
+	}
+	&__text {
+		margin: 0 0 10px 0;
+		padding: 0;
+		overflow: hidden;
+		height: auto;
+		font-size: $font-size-additional;
+		transition: max-height 0.5s ease;
+		&--hide {
+			max-height: 0;
+		}
+		&:nth-child(2) {
+			margin-bottom: 0;
+		}
+	}
+	&__decor {
+		width: 100%;
+	}
+	&__button {
+		position: relative;
+		padding-left: 32px;
+		margin-top: 16px;
+		font-size: 16px;
+		font-weight: 500;
+		letter-spacing: -0.2px;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		&::before {
+			position: absolute;
+			content: '';
+			background: url('../../img/icon-expand.svg') no-repeat center;
+			width: 24px;
+			height: 24px;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			transition: transform 0.4s ease-in;
+		}
+		&--active::before {
+			transform: translateY(-50%) rotate(180deg);
+		}
+		&::after {
+			@include linear-text(75%, 30px);
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+		&:active {
+			top: 1px;
+		}
+	}
+}
+
+@media (min-width: 336px) {
+	.info__decor {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@media (min-width: 550px) {
+	.info {
+		display: flex;
+		column-gap: 48px;
+		&__decor {
+			width: 290px;
+			height: 146px;
+			border-radius: 5px;
+		}
+	}
+}
+
+@media (min-width: $tablet-width) {
+	.info {
+		&__column {
+			width: 50%;
+		}
+		&__decor {
+			width: 50%;
+			height: 100%;
+		}
+		&__button {
+			margin-top: 10px;
+		}
+	}
+}
+
+@media (min-width: $desktop-width) {
+	.info {
+		column-gap: 36px;
+		&__column {
+			margin-bottom: 0;
+		}
+		&__decor {
+			width: 531px;
+			height: 307px;
+		}
+	}
+}

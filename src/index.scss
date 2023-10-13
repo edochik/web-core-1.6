@@ -1,0 +1,43 @@
+@import '~normalize.css';
+@import 'styles/general/fonts';
+@import 'styles/general/var';
+@import 'styles/general/style';
+@import 'styles/blocks/swiper';
+
+@import 'styles/blocks/container';
+@import 'styles/blocks/main';
+@import 'styles/blocks/icon';
+@import 'styles/blocks/button-show-hide';
+@import 'styles/blocks/button';
+
+// burger-menu
+@import 'styles/blocks/burger-menu';
+// common
+@import 'styles/blocks/header';
+@import 'styles/blocks/logo';
+@import 'styles/blocks/contacts';
+@import 'styles/blocks/status';
+@import 'styles/blocks/title';
+@import 'styles/blocks/common';
+@import 'styles/blocks/info';
+@import 'styles/blocks/page-menu';
+//brands
+@import 'styles/blocks/brands';
+//headline
+@import 'styles/blocks/headline';
+//devices
+@import 'styles/blocks/devices';
+// price
+@import 'styles/blocks/price';
+//footer
+@import 'styles/blocks/footer';
+//sidebar
+@import 'styles/blocks/search';
+@import 'styles/blocks/sidebar';
+@import 'styles/blocks/menu';
+@import 'styles/blocks/mail';
+@import 'styles/blocks/phone';
+@import 'styles/blocks/language';
+//modal
+@import 'styles/blocks/modal-feedback';
+@import 'styles/blocks/modal-call';
